@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Memes Generator</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<style type="text/css">
+		h1 {
+			color: white;
+			font-family: arial;
+			font-size: 4em;
+			text-align: center;
+			padding-top: 300px;
+		}
+		td {
+			background-repeat: no-repeat;
+			background-size: 100%;
+			text-align: bottom;
+		}
+	</style>
+</head>
+<body>
+	<table align="center"><tr height=750><td width=1000 id="bgimage">
+		<h1 id="meme"></h1>
+	</td></tr></table>
+	<script type="text/javascript">
+		//Set a colour in case the image URL does not work
+		document.body.style.backgroundColor = "silver";
+		
+		//Take input from user by prompts
+		alert("Meme generator 2.0!");
+		var imageurl = prompt("Image URL: ");
+		var text = prompt("Text: ");
+		
+		//Set image as background and use HTML injection to overlay text
+		$("#bgimage").css("background-image", "url(" + imageurl + ")");
+		$("#meme").html(text);
+	</script>
+</body>
+</html>
